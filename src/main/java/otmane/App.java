@@ -15,9 +15,20 @@ public class App {
 
         }
         System.out.println("000000000000000000000000000000000000000000000000");
-       for (BankAccount account : accounts) {
-           System.out.println(account.type());
-       }
+        for (BankAccount account : accounts) {
+            System.out.println(account.type());
+            if (account instanceof CurrentAccount){
+                System.out.println("Current account"+((CurrentAccount)account).getOverDraft());
+            }
+            if (account instanceof SavingAccount){
+                System.out.println("Saving Account "+((SavingAccount)account).getInterestRate());
+            }
+
+
+
+        }
+
+
 //
 //            System.out.println("balance ="+acc.getbalance());
 //
